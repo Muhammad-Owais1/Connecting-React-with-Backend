@@ -6,22 +6,25 @@ const port = 3000
 const data = []
 
 app.use(express.json())
-app.use(cors(
-    {
-        origin: ["http://localhost:5173/"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
-))
+app.use(cors())
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+    try{
+        res.send('Hello World!')
+    }
+    catch (err) {
+        console.log(err)
+    }
 })
 
 app.post('/adduser', (req, res) => {
-    // data.push(req.body)
-    res.send(req.body)
-    console.log(req.body)
+    try{
+        res.send(req.body)
+        console.log(req.body)
+    }
+    catch(err) {
+        console.log(err)
+    }
 })
 
 // app.get('.getuser', (req, res) => {
