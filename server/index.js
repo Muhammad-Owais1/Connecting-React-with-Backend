@@ -18,9 +18,9 @@ app.post('/adduser', (req, res) => {
     console.log(req.body)
 })
 
-app.get('.getuser', (req, res) => {
-    res.send(data)
-})
+// app.get('.getuser', (req, res) => {
+//     res.send(data)
+// })
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
