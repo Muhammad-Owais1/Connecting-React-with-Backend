@@ -7,7 +7,7 @@ function App() {
 
   const handleSubmit = async () => {
     let response = await fetch(
-      'http://localhost:3000/adduser', 
+      'https://connecting-react-with-backend.vercel.app/adduser', 
       {
         crossDomain: true,
         method: 'POST',
