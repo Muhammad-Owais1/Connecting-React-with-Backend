@@ -28,14 +28,10 @@ function App() {
       {
         crossDomain: true,
         method: 'GET',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({
-          username: userName,
-          email: email,
-        })
       }
     );
-    console.log(response)
+    let data = await response.json()
+    console.log(data)
   }
   return (
     <>
