@@ -6,10 +6,10 @@ function App() {
   const [email, setEmail] = useState('')
 
   const handleSubmit = async () => {
-    fetch(
+    let response = await fetch(
       'https://connecting-react-with-backend.vercel.app/adduser', 
       {
-        crossDomain: true,
+        // crossDomain: true,
         method: 'POST',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({
@@ -18,6 +18,8 @@ function App() {
         })
       }
     );
+    let result = await response.json();
+      console.log(result);
   }
 
   // const handleShow = async () => {
