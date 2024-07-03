@@ -28,7 +28,7 @@ app.post('/adduser', (req, res) => {
     }
 })
 
-app.get('.getuser', (req, res) => {
+app.get('/getuser', (req, res) => {
     try{
         res.send(data)
     }
