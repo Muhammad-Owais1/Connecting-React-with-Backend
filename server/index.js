@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/adduser', (req, res) => {
-    data.push(req.body)
+    // data.push(req.body)
     res.send(req.body)
     console.log(req.body)
 })
