@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
 
 app.post('/adduser', (req, res) => {
     try{
+        data.push(req.body)
         res.send(req.body)
         console.log(req.body)
     }
@@ -27,9 +28,14 @@ app.post('/adduser', (req, res) => {
     }
 })
 
-// app.get('.getuser', (req, res) => {
-//     res.send(data)
-// })
+app.get('.getuser', (req, res) => {
+    try{
+        res.send(data)
+    }
+    catch(err) {
+        console.log(err)
+    }
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
